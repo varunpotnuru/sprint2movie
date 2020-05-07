@@ -1,0 +1,26 @@
+
+
+<table class="table table-bordered table-hover col-md-10 ">
+    <thead>
+      <th>Show Id</th>
+      <th>ShowStartTime</th>
+      <th>ShowEndTime</th>
+      <th>ShowName</th>  
+      <th>Delete</th>
+      
+    </thead>
+    <tbody>
+      <tr *ngFor="let sho of shows;let i=index">
+        <td>{{sho.showId}}</td>
+        <td>{{sho.showStartTime}}</td>
+        <td>{{sho.showEndTime}}</td>
+        <td>{{sho.showName}}</td>
+        <td><a class="btn btn-warning text-white" (click)="deleteShow(i)">Delete</a></td>
+
+       
+      </tr>
+    </tbody>
+</table>
+
+
+

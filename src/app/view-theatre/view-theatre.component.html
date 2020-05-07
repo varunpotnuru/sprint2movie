@@ -1,0 +1,26 @@
+
+
+<table class="table table-bordered table-hover col-md-10 ">
+    <thead>
+      <th>Theatre Id </th>
+      <th>Theatre Name</th>
+      <th>Theatre City</th>
+      <th>Manager Name</th>  
+      <th>Manager Contact</th>
+      <th>Delete</th>
+      
+    </thead>
+    <tbody>
+      <tr *ngFor="let the of theatres ; let i=index">
+        <td>{{the.theatreId}}</td>
+        <td>{{the.theatreName}}</td>
+        <td>{{the.theatreCity}}</td>
+        <td>{{the.managerName}}</td>
+        <td>{{the.managerContact}}</td>
+        <td><a class="btn btn-warning text-white" (click)="deleteTheatre(i)">Delete</a></td>
+      
+      </tr>
+    </tbody>
+</table>
+
+

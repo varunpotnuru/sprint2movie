@@ -1,0 +1,23 @@
+<div class="col-md-6">
+    <h2 class="text-center">Add Screen</h2>
+  <form (ngSubmit)="createScreen()">
+<div>
+    <input type="text" placeholder="enter id" id="screenId" name="screenId" [(ngModel)]="scr.screenId"  class="form-control" >
+ </div>  
+ <div>
+     <input type="text" placeholder="enter screenName" id="screenName" name="screenName" [(ngModel)]="scr.screenName" class="form-control">
+ </div> 
+ <div>
+     <input type="text" placeholder="enter hallHeight" id="hallHeight" name="hallHeight" [(ngModel)]="scr.hallHeight" class="form-control">
+ </div> 
+ <div>
+     <input type="text" placeholder="enter hallWidth" id="hallWidth" [(ngModel)]="scr.hallWidth" class="form-control">
+</div>
+
+
+<div>
+    <input type="submit" value="Add Screen" class="btn btn-danger">
+</div>
+</form>
+</div>
+

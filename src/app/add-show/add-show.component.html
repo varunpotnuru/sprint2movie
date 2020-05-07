@@ -1,0 +1,23 @@
+<div class="col-md-6">
+    <h2 class="text-center">Add Show</h2>
+  <form (ngSubmit)="createShow()">
+<div>
+    <input type="text" placeholder="enter showid" id="showId" name="showId" [(ngModel)]="sho.showId"  class="form-control" >
+ </div>  
+ <div>
+     <input type="text" placeholder="enter showStartTime" id="showStartTime" name="showStartTime" [(ngModel)]="sho.showStartTime" class="form-control">
+ </div> 
+ <div>
+     <input type="text" placeholder="enter showEndTime" id="showEndTime" name="showEndTime" [(ngModel)]="sho.showEndTime" class="form-control">
+ </div> 
+ <div>
+     <input type="text" placeholder="enter showName" id="showName" [(ngModel)]="sho.showName" class="form-control">
+</div>
+
+
+<div>
+    <input type="submit" value="Add Show" class="btn btn-danger">
+</div>
+</form>
+</div>
+

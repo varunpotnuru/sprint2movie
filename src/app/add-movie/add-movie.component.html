@@ -1,0 +1,67 @@
+<div class="col-md-6">
+    <div class="alert alert-success" *ngIf="info != undefined">{{ info }}</div>
+    <div class="alert alert-danger" *ngIf="errorInfo != undefined">
+      {{ errorInfo }}
+    </div>
+    <h2 class="text-center">Add Movie</h2>
+  <form (ngSubmit)="createMovie()">
+    
+    
+
+<div class="mt-3">Movie Name</div>
+ <div>
+     <input type="text" placeholder="enter moviename" id="movieName" name="movieName" [(ngModel)]="mov.movieName" pattern="[A-Za-z ]*"  title="movie name should contain alphabets only" class="form-control" #movieName="ngModel" required>
+ </div> 
+ <div class="alert alert-dark mt-3" *ngIf="movieName.invalid && (movieName.touched || movieName.dirty)">
+      movie name is mandatory and should contain alphabets only.
+</div>
+<div class="mt-3">Release Year</div>
+
+ <div>
+     <input type="number" placeholder="enter release year" id="releaseYear" name="releaseYear" [(ngModel)]="mov.releaseYear" pattern="[1-9]*" title="release year shoulod contain numbers only" class="form-control" #releaseYear="ngModel" required>
+ </div> 
+ <div class="alert alert-dark mt-3" *ngIf="releaseYear.invalid && (releaseYear.touched || releaseYear.dirty)">
+      release year is mandatory and should contain numbers only.
+ </div>
+ <div class="mt-3">genre</div>
+ <div>
+     <input type="text" placeholder="enter genre" id="genre" name="genre" [(ngModel)]="mov.genre"  pattern="[A-Za-z]*" title="genre should alphabets only" class="form-control" #genre="ngModel" required>
+</div>
+<div class="alert alert-dark mt-3" *ngIf="genre.invalid && (genre.touched || genre.dirty)">
+      genre is mandatory and should contain alphabets only.
+</div>
+<div class="mt-3">Director Name</div>
+<div>
+    <input type="text" placeholder="enter directorname" id="director" name="director" [(ngModel)]="mov.director" pattern="[A-Za-z]*" title="director name should contains alphabets only" class="form-control" #director="ngModel" required>
+</div>
+<div class="alert alert-dark mt-3" *ngIf="director.invalid && (director.touched || director.dirty)">
+      director name is mandatory and should contain alphabets only.
+</div>
+
+<div class="mt-3">RunTime</div>
+
+<div>
+    <input type="number" placeholder="enter runtime" id="runtime" name="runtime" [(ngModel)]="mov.runtime" pattern="[1-9]*" title="runtime should be mandatory"class="form-control" #runtime="ngModel" required>
+</div>
+<div class="alert alert-dark mt-3" *ngIf="runtime.invalid && (runtime.touched || runtime.dirty)">
+      run time is mandatory and should contain numbers only.
+</div>
+<div class="mt-3">Hero</div>
+<div>
+    <input type="text" placeholder="enter heroname" id="hero" name="hero" [(ngModel)]="mov.hero" pattern="[A-Za-z]*" class="form-control" #hero="ngModel" required>
+</div>
+<div class="alert alert-dark mt-3" *ngIf="hero.invalid && (hero.touched || hero.dirty)" >
+      Hero Name is mandatory and should contain alphabets only.
+</div>
+<div class="mt-3">Heroine</div>
+<div>
+    <input type="text" placeholder="enter heroinename" id="heroine" name="heroine" [(ngModel)]="mov.heroine" pattern="[A-Za-z]*" class="form-control" #heroine="ngModel" required>
+</div>                                                                                                                       
+<div>
+    <input type="text" placeholder="enter language" id="Language" name="Language" [(ngModel)]="mov.Language" class="form-control">
+</div>
+<div>
+    <input type="submit" value="Add Movie"  class="btn btn-danger">
+</div>
+</form>
+</div>

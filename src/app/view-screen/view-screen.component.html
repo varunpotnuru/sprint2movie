@@ -1,0 +1,24 @@
+
+
+<table class="table table-bordered table-hover col-md-10 ">
+    <thead>
+      <th>Screen Id</th>
+      <th>Screen Name</th>
+      <th>Hall Height</th>
+      <th>Hall Width</th>  
+      <th>Delete</th>
+      
+    </thead>
+    <tbody>
+      <tr *ngFor="let scr of screens;let i =index">
+        <td>{{scr.screenId}}</td>
+        <td>{{scr.screenName}}</td>
+        <td>{{scr.hallHeight}}</td>
+        <td>{{scr.hallWidth}}</td>
+        <td><a class="btn btn-warning text-white" (click)="deleteScreen(i)">Delete</a></td>
+       
+      </tr>
+    </tbody>
+</table>
+
+
